@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="/">Rahul Patel</a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link <%= (page === '/') ? 'active' : '' %>" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <%= (page === '/about') ? 'active' : '' %>" href="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <%= (page === '/lego/sets') ? 'active' : '' %>" href="/lego/sets">Collection</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <%= (page === '/lego/addSet') ? 'active' : '' %>" href="/lego/addSet">Add to Collection</a>
+      </li>
+    </ul>
+  </div>
+</nav>

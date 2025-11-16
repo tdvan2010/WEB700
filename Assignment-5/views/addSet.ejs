@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Add Set</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+</head>
+<body>
+  <%- include('partials/navbar', { page: '/lego/addSet' }) %>
+
+  <header class="py-5 text-center">
+    <h1 class="display-5">Add Set</h1>
+    <p class="lead">Add a new LEGO set to the in-memory collection.</p>
+  </header>
+
+  <main class="container pb-5">
+    <form class="row g-3" method="post" action="/lego/addSet">
+      <div class="col-md-6">
+        <label class="form-label">Set Number</label>
+        <input class="form-control" type="text" name="set_num" required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Name</label>
+        <input class="form-control" type="text" name="name" required>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Year</label>
+        <input class="form-control" type="number" name="year" required>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Parts</label>
+        <input class="form-control" type="number" name="num_parts" required>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Theme</label>
+        <select class="form-select" name="theme_id" required>
+          <% (themes || []).forEach(t => { %>
+            <option value="<%= t.id %>"><%= t.name %></option>
+          <% }) %>
+        </select>
+      </div>
+
+      <div class="col-12">
+        <label class="form-label">Image URL</label>
+        <input class="form-control" type="url" name="img_url" required>
+      </div>
+
+      <div class="col-12">
+        <button class="btn btn-dark" type="submit">Add Set</button>
+        <a class="btn btn-outline-light" href="/lego/sets">Back to Collection</a>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

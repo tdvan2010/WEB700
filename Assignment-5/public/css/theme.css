@@ -1,0 +1,58 @@
+/* your original theme.css (unchanged) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+html, body {
+  height: 100%;
+  background: linear-gradient(135deg, #0c0d10, #151924 55%, #0f1117);
+  color: #eaeaea;
+  overflow: auto;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+}
+
+.bg-light {
+  background: linear-gradient(180deg, rgba(233, 233, 233, 0.08), rgba(233, 233, 233, 0.02)) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25), inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.navbar-light .navbar-brand {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #7751DC !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+}
+
+.nav-link {
+  font-family: Inter, system-ui, sans-serif;
+  color: #7751DC !important;
+  transition: color .2s ease, transform .2s ease, text-shadow .2s ease;
+}
+.nav-link:hover {
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+}
+
+a {
+  color: #7751DC;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  color: #fff;
+  border-bottom-color: rgba(231,213,161,0.4);
+}
+
+table tr:nth-child(odd) td {
+  background: rgba(231, 213, 161, 0.06);
+}
+
+ol, ul { padding-left: 1.25rem; margin-top: .5rem; }
+li { margin: .35rem 0; }
+
+.shadow { box-shadow: 0 10px 30px rgba(0,0,0,.35) !important; }

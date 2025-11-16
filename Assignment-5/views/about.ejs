@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>About — Theme Demo (A4)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+</head>
+<body>
+  <%- include('partials/navbar', { page: '/about' }) %>
+
+
+  <header class="py-5 text-center">
+    <h1 class="display-5">About Me</h1>
+    <p class="lead">I’m Rahul Patel, a passionate designer and creative developer who transforms ideas into meaningful digital experiences.</p>
+  </header>
+
+  <main class="container pb-5">
+    <section class="mb-4">
+      <h2>Theme Demo</h2>
+      <p>This page demonstrates common HTML elements under my custom theme, including tables, lists, images, audio and video.</p>
+    </section>
+
+    <!-- TABLES SECTION -->
+    <section class="mb-5">
+      <h3>Tables</h3>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <table class="table table-dark table-striped">
+            <caption>LEGO Inventory - Table A</caption>
+            <thead>
+              <tr>
+                <th scope="col">Set #</th>
+                <th scope="col">Name</th>
+                <th scope="col">Year</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">21335</td>
+                <td>Motorized Lighthouse</td>
+                <td>2022</td>
+              </tr>
+              <tr>
+                <td colspan="2">Parts: 2065 (Creator Expert)</td>
+              </tr>
+              <tr>
+                <td>75257</td>
+                <td>Millennium Falcon</td>
+                <td>2019</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">Sample data for tables</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="col-md-6">
+          <table class="table table-dark table-striped">
+            <caption>LEGO Themes — Table B</caption>
+            <thead>
+              <tr>
+                <th>Theme ID</th>
+                <th>Theme Name</th>
+                <th>Sets</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">158</td>
+                <td>Star Wars</td>
+                <td>Many</td>
+              </tr>
+              <tr>
+                <td colspan="2">Iconic ships & scenes</td>
+              </tr>
+              <tr>
+                <td>673</td>
+                <td>Ideas</td>
+                <td>Fan-designed sets</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="3">Sample data for tables</td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <p>These two tables use <strong>caption</strong>, <strong>thead/tbody/tfoot</strong>, and demonstrate both <strong>rowspan</strong> and <strong>colspan</strong> as required.</p>
+    </section>
+
+
+    <section class="mb-5">
+      <h3>Lists</h3>
+      <ol>
+        <li>Pick a LEGO theme</li>
+        <li>Choose a set
+          <ul>
+            <li>Creator Expert</li>
+            <li>Star Wars</li>
+            <li>Technic</li>
+          </ul>
+        </li>
+        <li>Check parts count</li>
+        <li>Build with instructions</li>
+        <li>Display & photograph</li>
+      </ol>
+      <p>This section includes an ordered list with a nested unordered list (different type), satisfying the list requirement.</p>
+    </section>
+
+    <!-- IMAGES SECTION -->
+    <section class="mb-5">
+      <h3>Images</h3>
+      <div class="row g-3">
+        <div class="col-sm-4">
+          <img class="img-fluid rounded shadow" alt="Colorful LEGO bricks"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Lego_Color_Bricks.jpg/440px-Lego_Color_Bricks.jpg">
+        </div>
+        <div class="col-sm-4">
+          <img class="img-fluid rounded shadow" alt="LEGO minifigure"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Lego_minifigs.jpg/480px-Lego_minifigs.jpg">
+        </div>
+        <div class="col-sm-4">
+          <img class="img-fluid rounded shadow" alt="LEGO building plate"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/LEGO_green_baseplate.jpg/480px-LEGO_green_baseplate.jpg">
+        </div>
+      </div>
+      <p>At least three images with <code>alt</code> text are provided; remote images are allowed as per the instructions.</p>
+    </section>
+
+    <!-- AUDIO SECTION -->
+    <section class="mb-5">
+      <h3>Audio</h3>
+      <audio controls>
+        <source src="https://pat-crawford-sdds.netlify.app/shared/winter-2025/web700/A4/sample-audio.mp3" type="audio/mpeg">
+        <source src="https://pat-crawford-sdds.netlify.app/shared/winter-2025/web700/A4/sample-audio.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+      <p>HTML5 audio player with two formats for broader compatibility(MP3).</p>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section class="mb-5">
+      <h3>Video</h3>
+      <video controls width="480" class="rounded shadow">
+        <source src="https://pat-crawford-sdds.netlify.app/shared/winter-2025/web700/A4/sample-video.mp4" type="video/mp4">
+        <source src="https://pat-crawford-sdds.netlify.app/shared/winter-2025/web700/A4/sample-video.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+      <p>HTML5 video player demonstrating embedded media.</p>
+    </section>
+  </main>
+</body>
+</html>
